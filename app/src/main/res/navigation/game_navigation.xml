@@ -25,7 +25,7 @@
             app:destination="@id/mainFragment"
             app:enterAnim="@android:anim/slide_in_left" />
         <argument
-            android:name="player_name"
+            android:name="player_Score"
             app:argType="string" />
     </fragment>
 </navigation>

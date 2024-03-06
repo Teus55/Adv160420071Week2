@@ -28,9 +28,9 @@ class GameFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.let {
-            val playerName =
-                GameFragmentArgs.fromBundle(requireArguments()).playerName
-            binding.txtTurn.text = "$playerName's Turn"
+            val playerScore =
+                GameFragmentArgs.fromBundle(requireArguments()).playerScore
+            binding.txtTurn.text = "Your score is $playerScore"
         }
 
         binding.btnBack.setOnClickListener {

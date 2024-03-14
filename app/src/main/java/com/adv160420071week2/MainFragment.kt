@@ -38,6 +38,8 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         var hasil = changeNumber()
         var playerScore = 0
+
+
         binding.btnStart.setOnClickListener {
             val playerAnswer = binding.txtAnswer.text.toString()
             if (playerAnswer != ""){
@@ -53,6 +55,11 @@ class MainFragment : Fragment() {
                 val action = MainFragmentDirections.actionGameFragment(playerScore.toString())
                 Navigation.findNavController(it).navigate(action)
             }
+        }
+
+        binding.btnOption.setOnClickListener {
+            val action = MainFragmentDirections.actionOptionFragment()
+            Navigation.findNavController(it).navigate(action)
         }
     }
 }
